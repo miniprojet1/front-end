@@ -1,0 +1,23 @@
+<div class="container">
+
+  <table class="table table-striped">
+      <thead>
+          <th>Id</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Operations </th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let f of fournisseurs">
+              <td>{{f.id}}</td>
+              <td>{{f.name}}</td>
+              <td>{{f.adresse}}</td>
+              <td>{{f.mail}}</td>
+              <td><button (click)="deleteUser(f)">Delete</button> </td>
+              <td><button class="btn btn-primary" (click)="updateFournisseur(f)">Edit</button></td>
+
+          </tr>
+      </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="newFournisseur()">New User</button>
+</div>
