@@ -1,20 +1,15 @@
 #login_page{
-    background-image: url("../../assets/img1/white_leather.png ");
-  background-repeat: repeat;
-    background-size: cover;
-    height: 100%;
-  padding-top: 300px;
-  padding-left: 50px;
+
+padding-top: 205px;
+  padding-left: 400px;
     padding-right: 50px;
-  
+
+
     }
-  html,body{
-  
-    height: 100%;}
-  
+
+
   #test{
     height: 100%;
   }
   a{color: black;}
-  
-  
+
