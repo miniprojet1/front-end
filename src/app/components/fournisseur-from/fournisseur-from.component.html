@@ -1,4 +1,9 @@
+
+
+
+
 <html>
+
         <div id="a">
         <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
             <nav class="navbar navbar-light bg-light">
@@ -151,26 +156,31 @@
           
       
           </div>
-          
+          <div class="container">
+            <form class="form-horizontal" role="form" (ngSubmit)="processForm()">
+              <h2>Ajout fournisseur</h2>
+              <div class="form-group">
+                <label for="fname" class="col-sm-3 control-label">Nom</label>
+                <div class="col-sm-9">
+                  <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus [(ngModel)]="fournisseur.name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lname" class="col-sm-3 control-label">Adresse</label>
+                <div class="col-sm-9">
+                  <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus [(ngModel)]="fournisseur.adresse" >
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="lname" class="col-sm-3 control-label">Email* </label>
+                <div class="col-sm-9">
+                  <input type="email" id="email" placeholder="Email" class="form-control" name= "email"  [(ngModel)]="fournisseur.mail">
+                </div>
+              </div>
 
-<div class="container">
 
-    <form (ngSubmit)="processForm()">
-      
-        <div class="form group">
-            <label for="fname"> Name</label>
-            <input type="text" name="name" class="form-control"[(ngModel)]="fournisseur.name">
-        </div>
-        <div class="form group">
-            <label for="lname">adresse</label>
-            <input type="text" name="adresse" class="form-control" [(ngModel)]="fournisseur.adresse">
-        </div>
-        <div class="form group">
-          <label for="lname">mail</label>
-          <input type="text" name="mail" class="form-control"  
-          [(ngModel)]="fournisseur.mail">
-      </div>
-        <input type="submit" value="save" class="btn btn-success">
-    </form>
-</div>
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form> <!-- /form -->
+          </div> <!-- ./container -->
+
 </div></div></html>

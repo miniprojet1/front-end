@@ -21,7 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ListpaymentComponent } from './components/listpayment/listpayment.component';
 import { FromPaymentComponent } from './components/from-payment/from-payment.component';
 import { ListemployeComponent } from './components/listemploye/listemploye.component';
-import { InscriComponent } from './inscri/inscri.component';
+
 
 const appRoutes:Routes=[
   {path:'listfournisseur',component:ListfournisseurComponent},
@@ -51,7 +51,7 @@ const appRoutes:Routes=[
     ListpaymentComponent,
     FromPaymentComponent,
     ListemployeComponent,
-    InscriComponent
+
   ],
   imports: [
     BrowserModule,HttpModule,
