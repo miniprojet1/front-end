@@ -1,0 +1,35 @@
+<div class="container">
+
+  <form (ngSubmit)="processForm()">
+      <div class="form group">
+          <input type="text" name="id" class="form-control" [(ngModel)]="article.id">
+      </div>
+      <div class="form group">
+          <label for="fname"> prix_article</label>
+          <input type="text" name="name" class="form-control"[(ngModel)]="article.prix_article">
+      </div>
+      <div class="form group">
+          <label for="lname">nom_article</label>
+          <input type="text" name="adresse" class="form-control" [(ngModel)]="article.nom_article ">
+      </div>
+      <div class="form group">
+        <label for="lname">categorie_article</label>
+        <input type="text" name="mail" class="form-control"  
+        [(ngModel)]="article.categorie_article">
+    </div>
+    <div class="form group">
+      <label for="lname">qte_article</label>
+      <input type="text" name="mail" class="form-control"  
+      [(ngModel)]="article.qte_article">
+  </div>
+  <div class="form group">
+    <label for="lname">qte_article</label>
+    <select type="text" name="id_fournisseur" class="form-control"  
+    [(ngModel)]="article.id_fournisseur">
+    <option *ngFor="let c of fournisseurs">{{c.id}}</option>
+    </select>
+</div>
+
+      <input type="submit" value="save" class="btn btn-success">
+  </form>
+</div>

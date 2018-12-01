@@ -41,13 +41,13 @@ deleteUser(fournisseur){
 }
 updateFournisseur(fournisseur){  
   this._fournisseurService.setter(fournisseur);
-  this._router.navigate(['/op']);
+  this._router.navigate(['/ajoutfournisseur']);
 
 }
 newFournisseur(){
   let fournisseur =new Fournisseur();
   this._fournisseurService.setter(fournisseur);
-  this._router.navigate(['/op']);
+  this._router.navigate(['/ajoutfournisseur']);
 
 }
 
