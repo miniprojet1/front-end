@@ -49,8 +49,8 @@
 
 .dotmark:hover {
   border: 1px dashed #fff;
-  color: #fff;
-  background:deepskyblue;
+  color: deepskyblue;
+  background:blue;
 }
 
 .dotmark i {
@@ -584,7 +584,7 @@ hr.soften {
   text-align: center;
   color: #fff;
   border-radius: 2px;
-  background: deepskyblue;
+  background: skyblue;
   display: inline-block;
   padding: 0 12px;
   border: 0;

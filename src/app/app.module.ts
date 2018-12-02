@@ -21,6 +21,10 @@ import { LoginComponent } from './components/login/login.component';
 import { ListpaymentComponent } from './components/listpayment/listpayment.component';
 import { FromPaymentComponent } from './components/from-payment/from-payment.component';
 import { ListemployeComponent } from './components/listemploye/listemploye.component';
+import { AdmiComponent } from './components/admi/admi.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ListeComponent } from './components/liste/liste.component';
+import { ProduitComponent } from './components/produit/produit.component';
 
 
 const appRoutes:Routes=[
@@ -33,7 +37,10 @@ const appRoutes:Routes=[
   {path: 'login',component:LoginComponent},
   {path: 'listpayement',component:ListpaymentComponent},
   {path: 'ajoutpayement',component:FromPaymentComponent},
-  {path: 'listemploye',component:ListemployeComponent}
+  {path: 'listemploye',component:ListemployeComponent},
+  {path: 'admi',component:AdmiComponent},
+  {path: 'contact',component:ContactComponent},
+  {path: 'liste',component:ListeComponent}
 
 
 ] 
@@ -51,6 +58,10 @@ const appRoutes:Routes=[
     ListpaymentComponent,
     FromPaymentComponent,
     ListemployeComponent,
+    AdmiComponent,
+    ContactComponent,
+    ListeComponent,
+    ProduitComponent,
 
   ],
   imports: [

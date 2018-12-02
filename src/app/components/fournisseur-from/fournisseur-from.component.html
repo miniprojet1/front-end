@@ -157,24 +157,24 @@
       
           </div>
           <div class="container">
-            <form class="form-horizontal" role="form" (ngSubmit)="processForm()">
-              <h2>Ajout fournisseur</h2>
-              <div class="form-group">
-                <label for="fname" class="col-sm-3 control-label">Nom</label>
-                <div class="col-sm-9">
-                  <input type="text" id="firstName" placeholder="First Name" class="form-control" autofocus [(ngModel)]="fournisseur.name">
+            <form class="wrap-input100 validate-input m-b-16 " role="form" (ngSubmit)="processForm()">
+              <h2 style="font-family: 'Open Sans' , sans-serif">Ajout fournisseur</h2>
+              <div class="form-group" style="padding-left: 40px;">
+                <label for="fname" class="col-sm-1 control-label">Nom</label>
+                <div class="col-sm-11">
+                  <input type="text" id="firstName" placeholder="First Name" class="input100" autofocus [(ngModel)]="fournisseur.name">
                 </div>
               </div>
-              <div class="form-group">
-                <label for="lname" class="col-sm-3 control-label">Adresse</label>
-                <div class="col-sm-9">
-                  <input type="text" id="lastName" placeholder="Last Name" class="form-control" autofocus [(ngModel)]="fournisseur.adresse" >
+              <div class="form-group" style="padding-left: 40px;">
+                <label for="lname" class="col-sm-1 control-label">Adresse</label>
+                <div class="col-sm-11">
+                  <input type="text" id="lastName" placeholder="Last Name" class="input100" autofocus [(ngModel)]="fournisseur.adresse" >
                 </div>
               </div>
-              <div class="form-group">
-                <label for="lname" class="col-sm-3 control-label">Email* </label>
-                <div class="col-sm-9">
-                  <input type="email" id="email" placeholder="Email" class="form-control" name= "email"  [(ngModel)]="fournisseur.mail">
+              <div class="form-group" style="padding-left: 40px;">
+                <label for="lname" class="col-sm-1 control-label">Email* </label>
+                <div class="col-sm-11">
+                  <input type="email" id="email" placeholder="Email" class="input100" name= "email"  [(ngModel)]="fournisseur.mail">
                 </div>
               </div>
 
