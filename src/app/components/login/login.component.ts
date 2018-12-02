@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
         }
 
         else {
-          this._rotuer.navigate(['/admi']);
+          this._rotuer.navigate(['../admi']);
         }
       }
     );
