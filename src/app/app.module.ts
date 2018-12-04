@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {RouterModule,Routes} from '@angular/router' ;
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,7 +15,7 @@ import {ArticleService} from'./shared_service/article.service';
 import{PayementService} from './shared_service/payement.service';
 
 
-import{FormsModule} from '@angular/forms';
+import{FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FromArtComponent } from './components/from-art/from-art.component';
 import { LoginComponent } from './components/login/login.component';
@@ -68,7 +69,7 @@ const appRoutes:Routes=[
     BrowserModule,HttpModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-   
+    ReactiveFormsModule,
  
     
   ],
