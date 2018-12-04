@@ -26,7 +26,7 @@ export class FournisseurFromComponent implements OnInit {
 private fournisseur:Fournisseur;
   constructor(private _fournisseurService: FournisseurService , private _rotuer:Router , fb: FormBuilder ) {
     this.rForm = fb.group({
-      'nom': [null, Validators.required],
+      'nom': [null, Validators.required, Validators.minLength(3), Validators.maxLength(6)],
       'adresse': [null, Validators.required],
       'email': [null, [Validators.required, Validators.email]],
 
