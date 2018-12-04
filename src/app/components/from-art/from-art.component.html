@@ -157,52 +157,49 @@
 
     </div>
 <div class="container">
-
-  <form (ngSubmit)="processForm()" class="wrap-input100 validate-input m-b-16">
+  <form (ngSubmit)="processForm()" class="wrap-input100 validate-input m-b-16 " role="form" >
     <h2 style="font-family: 'Open Sans' , sans-serif">Ajout article</h2>
-      <div class="form group">
-        <label for="fname" class="col-sm-1 control-label">Nom</label>
-        <div class="col-sm-11">
-          <input type="text" name="id" class="input100" [(ngModel)]="article.id">
-      </div>
-      </div>
-      <div class="form group">
-          <label for="fname" class="col-sm-1 control-label"> prix_article</label>
-        <div class="col-sm-11">
-          <input type="text" name="name" class="input100"[(ngModel)]="article.prix_article">
-      </div>
-      </div>
-      <div class="form group" >
-          <label for="lname" class="col-sm-1 control-label">nom_article</label>
-        <div class="col-sm-11">
-          <input type="text" name="adresse" class="input100" [(ngModel)]="article.nom_article ">
-      </div>
-      </div>
-      <div class="form group">
-        <label for="lname" class="col-sm-1 control-label">categorie_article</label>
-        <div class="col-sm-11">
-        <input type="text" name="mail" class="input100"
-        [(ngModel)]="article.categorie_article">
-    </div>
-      </div>
-    <div class="form group">
-      <label for="lname" class="col-sm-1 control-label">qte_article</label>
+    <div class="form-group" style="padding-left: 40px;">
+      <label for="fname" class="col-sm-1 control-label">Nom</label>
       <div class="col-sm-11">
-      <input type="text" name="mail" class="input100"
-      [(ngModel)]="article.qte_article">
-  </div>
+        <input type="text" id="firstName" placeholder="First Name" class="input100" autofocus [(ngModel)]="article.id">
+      </div>
     </div>
-  <div class="form group">
-    <label for="lname" class="col-sm-1 control-label">qte_article</label>
-    <div class="col-sm-11">
-    <select type="text" name="id_fournisseur" class="input100"
-    [(ngModel)]="article.id_fournisseur">
-    <option *ngFor="let c of fournisseurs">{{c.id}}</option>
-    </select>
-</div>
-  </div>
+    <div class="form-group" style="padding-left: 40px;">
+      <label for="lname" class="col-sm-1 control-label">prix_article</label>
+      <div class="col-sm-11">
+        <input type="text" id="lastName" placeholder="prix_article" class="input100" autofocus [(ngModel)]="article.prix_article" >
+      </div>
+    </div>
+    <div class="form-group" style="padding-left: 40px;">
+      <label for="lname" class="col-sm-1 control-label">nom article </label>
+      <div class="col-sm-11">
+        <input type="email" id="email" placeholder="nom article" class="input100" name= "email"  [(ngModel)]="article.nom_article ">
+      </div>
+    </div>
+    <div class="form-group" style="padding-left: 40px;">
+      <label for="lname" class="col-sm-1 control-label">categorie article </label>
+      <div class="col-sm-11">
+        <input type="email" id="email" placeholder="categorie_article" class="input100" name= "email"  [(ngModel)]="article.categorie_article">
+      </div>
+    </div>
+    <div class="form-group" style="padding-left: 40px;">
+      <label for="lname" class="col-sm-1 control-label">qte_article </label>
+      <div class="col-sm-11">
+        <input type="email" id="email" placeholder="Email" class="input100" name= "email"  [(ngModel)]="article.qte_article">
+      </div>
+    </div>
+    <div class="form group"  style="padding-left: 40px;">
+      <label for="lname" class="col-sm-1 control-label">numéro du fournisseur</label>
+      <div class="col-sm-11">
+        <select type="text" name="id_fournisseur" class="input100" [(ngModel)]="article.id_fournisseur">
+          <option *ngFor="let c of fournisseurs">{{c.id}}</option>
+        </select>
+      </div>
+    </div>
 
-      <input type="submit" value="save" class="btn btn-success">
-  </form>
+
+    <button type="submit" class="btn btn-primary btn-block">Register</button>
+  </form> <!-- /form -->
 </div>
   </div></div></html>
