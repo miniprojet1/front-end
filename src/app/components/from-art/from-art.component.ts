@@ -17,7 +17,6 @@ export class FromArtComponent implements OnInit {
     private fournisseur:Fournisseur;
     private fournisseurs:Fournisseur[];
     //private _fournisseurService:FournisseurService;
-    
     constructor(private _fournisseurService:FournisseurService, private _articleService:ArticleService,private _rotuer:Router ) { }
 
     ngOnInit() {
