@@ -39,10 +39,10 @@ updateArticle(article){
 
 }
 createArticle(){
-  let article =new Article();
+  /*let article =new Article();
   this._articleService.setter(article);
   this._router.navigate(['/ajoutarticle']);
-
+*/
 }
-  
+
 }

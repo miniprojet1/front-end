@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ListfournisseurComponent } from './components/listfournisseur/listfournisseur.component';
 import { FournisseurFromComponent } from './components/fournisseur-from/fournisseur-from.component';
-
+import {CommandeService} from './shared_service/commande.service' ;
 import {FournisseurService} from'./shared_service/fournisseur.service';
 import{HttpModule} from '@angular/http';
 import {Listarticlecomponent} from './components/listarticle/listarticle.component';
@@ -14,7 +14,7 @@ import {ArticleService} from'./shared_service/article.service';
 import{PayementService} from './shared_service/payement.service';
 
 
-import{FormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms';
 import { AccueilComponent } from './accueil/accueil.component';
 import { FromArtComponent } from './components/from-art/from-art.component';
 import { LoginComponent } from './components/login/login.component';
@@ -25,6 +25,9 @@ import { AdmiComponent } from './components/admi/admi.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ListeComponent } from './components/liste/liste.component';
 import { ProduitComponent } from './components/produit/produit.component';
+import { ListerPanierComponent } from './components/lister-panier/lister-panier.component';
+import { ListcommandeComponent } from './components/listcommande/listcommande.component';
+import { CommandeFormComponent } from './components/commande-form/commande-form.component';
 
 
 const appRoutes:Routes=[
@@ -40,10 +43,16 @@ const appRoutes:Routes=[
   {path: 'listemploye',component:ListemployeComponent},
   {path: 'admi',component:AdmiComponent},
   {path: 'contact',component:ContactComponent},
-  {path: 'liste',component:ListeComponent}
+  {path: 'liste', component : ListeComponent},
+  {path: 'listpanier',component:ListerPanierComponent},
+  {path: 'listcommande',component:ListcommandeComponent},
+  {path: 'ajoutcommande',component:CommandeFormComponent}
 
 
-] 
+
+
+
+] ;
 @NgModule({
   declarations: [
     AppComponent,
@@ -62,17 +71,18 @@ const appRoutes:Routes=[
     ContactComponent,
     ListeComponent,
     ProduitComponent,
+    ListerPanierComponent,
+    ListcommandeComponent,
+    CommandeFormComponent
+
 
   ],
   imports: [
     BrowserModule,HttpModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-   
- 
-    
   ],
-  providers: [Listarticlecomponent],
+  providers: [CommandeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

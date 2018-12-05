@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Fournisseur}from'../../fournisseur';
+import {Fournisseur} from'../../fournisseur';
 import {Router} from '@angular/router';
-import{FournisseurService} from '../../shared_service/fournisseur.service';
+import {FournisseurService} from '../../shared_service/fournisseur.service';
 @Component({
   selector: 'app-fournisseur-from',
   templateUrl: './fournisseur-from.component.html',
