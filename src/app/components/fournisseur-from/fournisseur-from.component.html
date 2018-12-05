@@ -162,26 +162,27 @@
               <div class="form-group" style="padding-left: 40px;">
                 <label for="fname" class="col-sm-1 control-label">Nom</label>
                 <div class="col-sm-11">
-                  <input formControlName="nom" type="text" id="firstName" placeholder="First Name" class="input100" autofocus [(ngModel)]="fournisseur.name">
+                  <input formControlName="nom" type="text" id="veuiller saisir votre nom" placeholder="First Name" class="input100" autofocus [(ngModel)]="fournisseur.name" minlength="5" maxlength="20"  >
                 </div>
               </div>
-              <div class="alert" *ngIf="!rForm.controls['nom'].valid && rForm.controls['nom'].touched">veuiller saisir votre nom </div>
+              <div class="alert alert-danger" *ngIf="!rForm.controls['nom'].valid && rForm.controls['nom'].touched">veuiller saisir un nom entre 5 et 20 caractères </div>
               <div class="form-group" style="padding-left: 40px;">
                 <label for="lname" class="col-sm-1 control-label">Adresse</label>
                 <div class="col-sm-11">
-                  <input formControlName="adresse" type="text" id="lastName" placeholder="nom" class="input100" autofocus [(ngModel)]="fournisseur.adresse" >
+                  <input formControlName="adresse" type="text" id="lastName" placeholder="veuiller saisir votre adresse" class="input100" autofocus [(ngModel)]="fournisseur.adresse" minlength="5" maxlength="20"  >
                 </div>
               </div>
-              <div class="alert" *ngIf="!rForm.controls['adresse'].valid && rForm.controls['adresse'].touched">veuiller saisir votre adresse</div>
+              <div class="alert alert-danger" *ngIf="!rForm.controls['adresse'].valid && rForm.controls['adresse'].touched ">veuiller saisir une adresse entre 5 et 20 caractères </div>
               <div class="form-group" style="padding-left: 40px;">
                 <label for="lname" class="col-sm-1 control-label">Email* </label>
                 <div class="col-sm-11">
-                  <input formControlName="email" type="email" id="email" placeholder="adresse mail" class="input100" name= "email"  [(ngModel)]="fournisseur.mail">
+                  <input formControlName="email" type="email" id="email" placeholder="veuiller saisir votre adresse mail" class="input100" name= "email"  [(ngModel)]="fournisseur.mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 </div>
               </div>
-              <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">veuiller saisir votre adresse mail</div>
+              <div class="alert alert-danger" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">veuiller saisir votre adresse mail</div>
 
-              <button type="submit" class="btn btn-primary btn-block">Register</button>
+              <button type="submit" class="btn btn-success btn-block" [disabled]="rForm.invalid" >Register</button>
+
             </form> <!-- /form -->
           </div> <!-- ./container -->
 
