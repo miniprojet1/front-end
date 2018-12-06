@@ -40,10 +40,11 @@ export class ListeComponent implements OnInit {
   }
 
   ajouterPanier(data: Article) {
-     this.panier = new Panier();
-     this.panier.nom_article = data.nom_article;
-     this.panier.prix_article = data.prix_article;
-     this.panier.totale = 0;
+    this.panier = new Panier();
+    this.panier.nom_article = data.nom_article;
+    this.panier.prix_article=data.prix_article;
+    this.panier.prix_article = data.prix_article;
+    this.panier.totale = 0;
     this._panierService.createPanier(this.panier).subscribe();
     this._rotuer.navigate(['/listpanier']);
   }

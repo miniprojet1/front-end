@@ -2,17 +2,17 @@
     <html>
     <div id="a">
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-              <img src="../../../assets/img1/logoo.JPG"  width="30" height="30" alt="">
-            </a>
+        <nav class="navbar navbar-light ">
+
+
+
           </nav>
-   
+      <img src="../../../assets/img1/logoo.JPG"  width="120px" height="30" alt="" style="padding-right: 10px;">
 
       <!-- Navbar Search -->
       <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+
       </form>
 
       <!-- Navbar -->
@@ -59,10 +59,10 @@
     <div id="wrapper">
 
         <div id="main">
-       
+
             <span onclick="openNav()">&#9776; Menu</span>
           </div>
-    
+
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
@@ -82,6 +82,7 @@
               <span class="menu-collapsed" style="font-family: serif;">Liste</span>
             </a>
           </div>
+        <br>
           <a href="#fourn" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-start align-items-center">
               <span class="fa fa-user fa-fw mr-3"></span>
@@ -98,7 +99,7 @@
               <span class="menu-collapsed" style="font-family: serif;">Liste</span>
             </a>
           </div>
-      
+        <br>
           <a href="#event" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-start align-items-center">
               <span class="fa fa-calendar fa-fw mr-3"></span>
@@ -115,7 +116,7 @@
               <span class="menu-collapsed" style="font-family: serif;">Liste</span>
             </a>
           </div>
-      
+        <br>
           <a href="#conv" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-start align-items-center">
               <span class="fa fa-tasks fa-fw mr-3"></span>
@@ -132,7 +133,7 @@
               <span class="menu-collapsed" style="font-family: serif;">Liste</span>
             </a>
           </div>
-      
+        <br>
           <a href="#cat" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
             <div class="d-flex w-100 justify-content-start align-items-center">
               <span class="fa fa-list fa-fw mr-3"></span>
@@ -149,11 +150,11 @@
               <span class="menu-collapsed" style="font-family: serif;">Liste</span>
             </a>
           </div>
-      
-  
+
+
       </div>
-      
-  
+
+
      
 	  
       <div id="content-wrapper">
@@ -189,7 +190,8 @@
                         <th>nom article </th>
 						<th>Categorie article</th>
                         <th>quantité article</th>
-                        <th rowspan="2">action</th>
+                      <th>id fournisseur</th>
+                        <th rowspan="2">    action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -201,6 +203,7 @@
               <td>{{f.nom_article}}</td>
               <td>{{f.categorie_article}}</td>
               <td>{{f.qte_article}}</td>
+                           <td>{{f.id_fournisseur}}</td>
                         <td><button (click)="deleteArticle(f)">Delete</button> </td>
               <td><button class="btn btn-primary" (click)="updateArticle(f)">Edit</button></td>
                     </tr>
@@ -215,13 +218,7 @@
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
-        <footer class="sticky-footer">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright © Cocea 2018</span>
-            </div>
-          </div>
-        </footer>
+
 
       </div>
       <!-- /.content-wrapper -->

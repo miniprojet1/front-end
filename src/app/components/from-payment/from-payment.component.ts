@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 import{PayementService} from '../../shared_service/payement.service';
 import {Fournisseur}from'../../fournisseur';
 import{FournisseurService} from '../../shared_service/fournisseur.service';
-
+import {FormBuilder,Validators,FormGroup, Validator} from '@angular/forms';
 @Component({
   selector: 'app-from-payment',
   templateUrl: './from-payment.component.html',
@@ -17,8 +17,27 @@ export class FromPaymentComponent implements OnInit {
   private fournisseur:Fournisseur;
   private fournisseurs:Fournisseur[];
   //private _fournisseurService:FournisseurService;
-  
-  constructor(private _fournisseurService:FournisseurService, private _payementService:PayementService,private _rotuer:Router ) { }
+
+  rForm: FormGroup;
+  post: any;
+  dateechpre:String ;
+  dateechpro: String ;
+
+
+
+  addForm(post) {
+
+  }
+  constructor(private _fournisseurService:FournisseurService, private _payementService:PayementService,private _rotuer:Router , fb: FormBuilder) {
+    this.rForm = fb.group({
+
+      'dateechpre': [null, Validators.required],
+      'dateechpro': [null, [Validators.required]]
+
+
+
+    });
+  }
 
   ngOnInit() {
     this.payement=this._payementService.getter();

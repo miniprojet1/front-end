@@ -22,14 +22,10 @@ private article= new Article();
   constructor(private _http:Http) { }
 
   getArticle(){
-    return this._http.get(this.baseUrl+'/Article',this.options).pipe(map((response:Response)=>response.json()))
-  
-  
-   
+    return this._http.get(this.baseUrl+'/Article',this.options).pipe(map((response:Response)=>response.json()));
   }
   deleteArticle(id:Number){
     return this._http.delete(this.baseUrl+'/Article/'+id,this.options).pipe(map((response:Response)=>response.json()));
-   
   }
 createArticle(article:Article){
     return this._http.post(this.baseUrl+'/Article',JSON.stringify(article), this.options).pipe(map((response:Response)=>response.json()));
