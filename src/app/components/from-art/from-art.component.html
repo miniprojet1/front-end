@@ -156,51 +156,49 @@
 
 
     </div>
-<div class="container">
-  <form (ngSubmit)="processForm()" class="wrap-input100 validate-input m-b-16 " role="form" >
-    <h2 style="font-family: 'Open Sans' , sans-serif">Ajout article</h2>
-    <div class="form-group" style="padding-left: 40px;">
-      <label for="fname" class="col-sm-1 control-label">Nom</label>
-      <div class="col-sm-11">
-        <input type="text" id="firstName" placeholder="First Name" class="input100" autofocus [(ngModel)]="article.id">
-      </div>
-    </div>
-    <div class="form-group" style="padding-left: 40px;">
-      <label for="lname" class="col-sm-1 control-label">nom article </label>
-      <div class="col-sm-11">
-        <input type="email" id="email" placeholder="nom article" class="input100" name= "email"  [(ngModel)]="article.nom_article ">
-      </div>
-    </div>
-    <div class="form-group" style="padding-left: 40px;">
-      <label for="lname" class="col-sm-1 control-label">prix_article</label>
-      <div class="col-sm-11">
-        <input type="text" id="lastName" placeholder="prix_article" class="input100" autofocus [(ngModel)]="article.prix_article" >
-      </div>
-    </div>
+    <div class="container">
+      <form class="wrap-input100 validate-input m-b-16 " role="form" (ngSubmit)="addForm(rForm.value)" (ngSubmit)="processForm()"  [formGroup]='rForm'>
+        <h2 style="font-family: 'Open Sans' , sans-serif">Ajout article</h2>
 
-    <div class="form-group" style="padding-left: 40px;">
-      <label for="lname" class="col-sm-1 control-label">categorie article </label>
-      <div class="col-sm-11">
-        <input type="email" id="email" placeholder="categorie_article" class="input100" name= "email"  [(ngModel)]="article.categorie_article">
-      </div>
-    </div>
-    <div class="form-group" style="padding-left: 40px;">
-      <label for="lname" class="col-sm-1 control-label">qte_article </label>
-      <div class="col-sm-11">
-        <input type="email" id="email" placeholder="Email" class="input100" name= "email"  [(ngModel)]="article.qte_article">
-      </div>
-    </div>
-    <div class="form group"  style="padding-left: 40px;">
-      <label for="lname" class="col-sm-1 control-label">numéro du fournisseur</label>
-      <div class="col-sm-11">
-        <select type="text" name="id_fournisseur" class="input100" [(ngModel)]="article.id_fournisseur">
-          <option *ngFor="let c of fournisseurs">{{c.id}}</option>
-        </select>
-      </div>
-    </div>
+        <div class="form-group" style="padding-left: 40px;">
+          <label for="lname" class="col-sm-1 control-label">nom article </label>
+          <div class="col-sm-11">
+            <input formControlName="nomarticle" type="text" id="nomarticle" placeholder="nom article" class="input100" name= "email"  [(ngModel)]="article.nom_article " minlength="2" maxlength="20">
+          </div>
+        </div>
+        <div class="alert alert-danger" *ngIf="!rForm.controls['nomarticle'].valid && rForm.controls['nomarticle'].touched">veuiller saisir le nom de l'article </div>
+        <div class="form-group" style="padding-left: 40px;">
+          <label for="lname" class="col-sm-1 control-label">prix_article</label>
+          <div class="col-sm-11">
+            <input formControlName="prixarticle" type="number" id="lastName" placeholder="prix_article" class="input100" autofocus [(ngModel)]="article.prix_article" >
+          </div>
+        </div>
+        <div class="alert alert-danger" *ngIf="!rForm.controls['prixarticle'].valid && rForm.controls['prixarticle'].touched">veuiller saisir le prix de l'article</div>
+        <div class="form-group" style="padding-left: 40px;">
+          <label for="lname" class="col-sm-1 control-label">categorie article </label>
+          <div class="col-sm-11">
+            <input formControlName="categoriearticle" type="text" id="email" placeholder="categorie_article" class="input100" name= "email"  [(ngModel)]="article.categorie_article">
+          </div>
+        </div>
+        <div class="alert alert-danger" *ngIf="!rForm.controls['categoriearticle'].valid && rForm.controls['categoriearticle'].touched">veuiller saisir la catégorie de l'article</div>
+        <div class="form-group" style="padding-left: 40px;">
+          <label for="lname" class="col-sm-1 control-label">qantité article </label>
+          <div class="col-sm-11">
+            <input formControlName="quantite" type="number" id="quantite" placeholder="quantité article" class="input100" name= "email"  [(ngModel)]="article.qte_article">
+          </div>
+        </div>
+        <div class="alert alert-danger" *ngIf="!rForm.controls['quantite'].valid && rForm.controls['quantite'].touched">veuiller saisir votre adresse mail</div>
 
-
-    <button type="submit" class="btn btn-primary btn-block">Register</button>
-  </form> <!-- /form -->
-</div>
+        <div class="form group"  style="padding-left: 40px;">
+          <label for="lname" class="col-sm-1 control-label">numéro du fournisseur</label>
+          <div class="col-sm-11">
+            <select type="text" name="id_fournisseur" class="input100" [(ngModel)]="article.id_fournisseur">
+              <option *ngFor="let c of fournisseurs">{{c.id}}</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-success btn-block" [disabled]="rForm.invalid" >enregistrer</button>
+      </form> <!-- /form -->
+    </div>
   </div></div></html>

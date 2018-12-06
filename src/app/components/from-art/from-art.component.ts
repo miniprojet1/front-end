@@ -4,7 +4,7 @@ import {Router} from '@angular/router';
 import{ArticleService} from '../../shared_service/article.service';
 import{FournisseurService} from '../../shared_service/fournisseur.service';
 import {Fournisseur}from'../../fournisseur';
-
+import {FormBuilder,Validators,FormGroup, Validator} from '@angular/forms';
 
 @Component({
   selector: 'app-from-art',
@@ -12,12 +12,35 @@ import {Fournisseur}from'../../fournisseur';
   styleUrls: ['./from-art.component.css']
 })
 export class FromArtComponent implements OnInit {
+  private article: Article;
+  private fournisseur: Fournisseur;
+  private fournisseurs: Fournisseur[];
+  //private _fournisseurService:FournisseurService;
 
-    private article:Article;
-    private fournisseur:Fournisseur;
-    private fournisseurs:Fournisseur[];
-    //private _fournisseurService:FournisseurService;
-    constructor(private _fournisseurService:FournisseurService, private _articleService:ArticleService,private _rotuer:Router ) { }
+
+  rForm: FormGroup;
+  post: any;
+  nomarticle: String = '';
+  prixarticle: number ;
+  categoriearticle: String = '';
+  quantite: number ;
+
+
+  addForm(post) {
+
+  }
+
+    constructor(private _fournisseurService:FournisseurService, private _articleService:ArticleService,private _rotuer:Router,  fb: FormBuilder ) {
+      this.rForm = fb.group({
+
+        'nomarticle': [null, Validators.required],
+        'prixarticle': [null, [Validators.required]],
+        'categoriearticle': [null, Validators.required],
+        'qantite': [null, [Validators.required]],
+
+
+      });
+    }
 
     ngOnInit() {
       this.article=this._articleService.getter();

@@ -162,7 +162,7 @@
               <div class="form-group" style="padding-left: 40px;">
                 <label for="fname" class="col-sm-1 control-label">Nom</label>
                 <div class="col-sm-11">
-                  <input formControlName="nom" type="text" id="veuiller saisir votre nom" placeholder="First Name" class="input100" autofocus [(ngModel)]="fournisseur.name" minlength="5" maxlength="20"  >
+                  <input formControlName="nom" type="text" id="nom" placeholder="First Name" class="input100" autofocus [(ngModel)]="fournisseur.name" minlength="5" maxlength="20"  >
                 </div>
               </div>
               <div class="alert alert-danger" *ngIf="!rForm.controls['nom'].valid && rForm.controls['nom'].touched">veuiller saisir un nom entre 5 et 20 caractères </div>
@@ -181,7 +181,7 @@
               </div>
               <div class="alert alert-danger" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">veuiller saisir votre adresse mail</div>
 
-              <button type="submit" class="btn btn-success btn-block" [disabled]="rForm.invalid" >Register</button>
+              <button type="submit" class="btn btn-success btn-block" [disabled]="rForm.invalid" >enregistrer</button>
 
             </form> <!-- /form -->
           </div> <!-- ./container -->

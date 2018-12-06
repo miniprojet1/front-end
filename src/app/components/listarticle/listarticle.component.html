@@ -190,7 +190,8 @@
                         <th>nom article </th>
 						<th>Categorie article</th>
                         <th>quantité article</th>
-                        <th rowspan="2">action</th>
+                      <th>id fournisseur</th>
+                        <th rowspan="2">    action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -202,6 +203,7 @@
               <td>{{f.nom_article}}</td>
               <td>{{f.categorie_article}}</td>
               <td>{{f.qte_article}}</td>
+                           <td>{{f.id_fournisseur}}</td>
                         <td><button (click)="deleteArticle(f)">Delete</button> </td>
               <td><button class="btn btn-primary" (click)="updateArticle(f)">Edit</button></td>
                     </tr>
